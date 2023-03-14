@@ -24,7 +24,7 @@ public class OrderRestController {
     public ResponseEntity<List<Order>> findOrderById(@PathVariable("order_id") Integer id) {
         List<Order> orderList = orderSvc.findOrderById(id);
         if (orderList.size()>0) {
-            return new ResponseEntity(orderList, HttpStatus.OK);
+            return new ResponseEntity<>(orderList, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(null,HttpStatus.NO_CONTENT);
         }
