@@ -1,7 +1,6 @@
 package tfip.paf.day23workshop.Services;
 
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;

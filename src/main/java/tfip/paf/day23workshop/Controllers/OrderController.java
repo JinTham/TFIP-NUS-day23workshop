@@ -44,7 +44,8 @@ public class OrderController {
 
     @PostMapping(path="/search")
     public String processSearch(@ModelAttribute("searchObject") SearchRequest searchObj, Model model, BindingResult result) {
-        List<Order> orders = orts.findOrderById(searchObj.getOrderId());
+        //List<Order> orders = orts.findOrderById(searchObj.getOrderId());
+        List<Order> orders = orderSvc.findOrderById(searchObj.getOrderId());
         model.addAttribute("orderList",orders);
         model.addAttribute("orderId", searchObj.getOrderId());
         return "order";

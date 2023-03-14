@@ -33,7 +33,7 @@
             </tbody>
         </table>
     </div>
-    <div class="container" th:if="${orderList==null}">
+    <div class="container" th:if="${orderList==null OR orderList.size()==0}">
         No order ID:  <span data-th-text="${orderId}"></span> found.
     </div>
     </div>
